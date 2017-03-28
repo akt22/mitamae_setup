@@ -11,6 +11,6 @@ git "clone dotfiles" do
   repository "https://github.com/akt22/dotfiles.git"
 end
 
-execute "setup dotfiles" do
-    command "bash #{ENV['HOME']}/dotfiles/setup.sh"
-end
+# execute "setup dotfiles" do
+#     command "bash #{ENV['HOME']}/dotfiles/setup.sh"
+# end
