@@ -4,5 +4,5 @@ os:
 
 script:
   - bash bin/setup_mitamae
-  - bin/mitamae local recipe.rb
+  - bin/mitamae local lib/recipe.rb
   - cat $HOME/hello.txt
