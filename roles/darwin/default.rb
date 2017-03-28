@@ -8,10 +8,10 @@ execute 'Install Homebrew' do
   not_if 'test $(which /usr/local/bin/brew)'
 end
 
-execute 'test after brew' do
-  command 'head /usr/local/bin/brew'
-end
-
 file File.join(ENV["HOME"], "hello.txt") do
     content "This is darwin roles."
+end
+
+execute 'test after brew' do
+  command 'head /usr/local/bin/brew'
 end
