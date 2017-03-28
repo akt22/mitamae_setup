@@ -1,6 +1,5 @@
 os:
   - osx
-  - linux
 
 script:
   - bash bin/setup_mitamae

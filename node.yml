@@ -4,4 +4,4 @@ packages:
   - zsh
   - git
   - curl
-  - awk
+  - gawk
