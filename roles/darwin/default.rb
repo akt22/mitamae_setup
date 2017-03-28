@@ -1,7 +1,3 @@
-execute 'test before brew' do
-  command 'head /usr/local/bin/brew'
-end
-
 execute 'Install Homebrew' do
   command 'sudo xcodebuild -license && xcode-select --install'
   command 'yes "" | /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
@@ -12,6 +8,4 @@ file File.join(ENV["HOME"], "hello.txt") do
     content "This is darwin roles."
 end
 
-execute 'test after brew' do
-  command 'head /usr/local/bin/brew'
-end
+include_roles 'base'
