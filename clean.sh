@@ -1,3 +1,3 @@
 #!/bin/bash
 
-rm bin/*
+rm bin/mitamae*

@@ -3,4 +3,4 @@ os:
   - linux
 
 script:
-  - bash setup_mitamae
+  - bash bin/setup_mitamae
