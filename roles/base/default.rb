@@ -10,3 +10,7 @@ git "clone dotfiles" do
   destination File.join(ENV["HOME"], 'dotfiles')
   repository "https://github.com/akt22/dotfiles.git"
 end
+
+execute "run setup.sh" do
+    command "bash $HOME/dotfiles/setup.sh"
+end

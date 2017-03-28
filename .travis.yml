@@ -2,5 +2,6 @@ os:
   - osx
 
 script:
-  - sh install.sh
-  - /bin/zsh zplug list
+  - bash bin/setup_mitamae
+  - bin/mitamae local -y node.yml lib/recipe.rb
+  - /bin/zsh
