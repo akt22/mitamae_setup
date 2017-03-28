@@ -1,7 +1,13 @@
 ---
 packages:
-  - tmux
-  - zsh
-  - git
-  - curl
-  - gawk
+  base:
+    - tmux
+    - zsh
+    - git
+    - curl
+    - gawk
+  darwin:
+    - xz
+    - binutils
+    - coreutils
+    - findutils
