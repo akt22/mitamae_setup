@@ -2,7 +2,7 @@ node[:packages][node[:platform]].each do |p|
   package p
 end
 
-node[:packages].each do |p|
+node[:packages]["base"].each do |p|
   package p
 end
 
