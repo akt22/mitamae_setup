@@ -5,3 +5,4 @@ script:
   - bash bin/setup_mitamae
   - bin/mitamae local -y node.yml lib/recipe.rb
   - cat $HOME/hello.txt
+  - zplug list
