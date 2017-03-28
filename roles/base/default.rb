@@ -1,10 +1,8 @@
-p node[:packages]
-
 # TODO: concat packages node[:platform] + :base
-node[:packages][node[:platform]].each do |p|
-    package p
-end
+_node = node[:packages].merge(node[:packages][node[:platform]])
 
-node[:packages][:base].each do |p|
+p _node
+
+_node.each do |p|
     package p
 end
