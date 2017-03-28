@@ -8,4 +8,4 @@ file File.join(ENV["HOME"], "hello.txt") do
     content "This is darwin roles."
 end
 
-include_roles 'base'
+include_role 'base'
