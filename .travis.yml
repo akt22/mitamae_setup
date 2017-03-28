@@ -2,9 +2,5 @@ os:
   - osx
 
 script:
-  - bash bin/setup_mitamae
-  - bin/mitamae local -y node.yml lib/recipe.rb
-  - cat $HOME/hello.txt
-  - bash $HOME/dotfiles/setup.sh
-  - ls -al $HOME
-  # - /bin/zsh zplug list
+  - sh install.sh
+  - /bin/zsh zplug list

@@ -1,13 +1,13 @@
 ---
 packages:
   base:
-    - tmux
-    - zsh
-    - git
-    - curl
+    # - tmux
+    # - zsh
+    # - git
+    # - curl
     - gawk
   darwin:
-    - xz
-    - binutils
+    # - xz
+    # - binutils
     - coreutils
-    - findutils
+    # - findutils
