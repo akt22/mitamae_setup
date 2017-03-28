@@ -1,0 +1,6 @@
+os:
+  - osx
+  - linux
+
+script:
+  - bash setup_mitamae
