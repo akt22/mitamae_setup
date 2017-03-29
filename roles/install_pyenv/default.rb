@@ -22,4 +22,5 @@ end
 
 execute "pip install ansible" do
   command "#{pyenv_init} pip install ansible"
+  not_if "#{pyenv_init} pip freeze | grep ansible"
 end
