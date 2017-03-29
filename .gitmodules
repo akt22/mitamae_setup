@@ -1,0 +1,6 @@
+[submodule "plugins/itamae-plugin-resource-pip"]
+	path = plugins/itamae-plugin-resource-pip
+	url = https://github.com/katsyoshi/itamae-plugin-resource-pip.git
+[submodule "plugins/itamae-plugin-recipe-pyenv"]
+	path = plugins/itamae-plugin-recipe-pyenv
+	url = https://github.com/katsyoshi/itamae-plugin-recipe-pyenv.git
