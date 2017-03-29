@@ -14,3 +14,4 @@ end
 execute "run setup.sh" do
     command "bash $HOME/dotfiles/setup.sh"
 end
+
