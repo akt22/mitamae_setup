@@ -7,7 +7,7 @@ end
 
 pyenv_init = <<-EOS
   export PYENV_ROOT=#{PYENV_ROOT}
-  export PATH="#{pyenv_root}/bin:${PATH}"
+  export PATH="#{PYENV_ROOT}/bin:${PATH}"
   eval "$(pyenv init --no-rehash -)"
 EOS
 
