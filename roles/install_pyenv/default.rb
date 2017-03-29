@@ -1,26 +1,25 @@
 # pyenv の設定を.bashrcに書く
+PYENV_ROOT = File.join(ENV["HOME"], '.pyenv')
 git "clone pyenv" do
-  destination File.join(ENV["HOME"], '.pyenv')
+  destination "#{PYENV_ROOT}"
   repository "https://github.com/pyenv/pyenv.git"
 end
 
-PYENV_SCRIPT = File.join(ENV["HOME"], ".pyenvrc")
-
-file "#{PYENV_SCRIPT}" do
-  content 'export PYENV_ROOT=$HOME/.pyenv
-export PATH=$PYENV_ROOT/bin:$PATH
-eval "$(pyenv init -)"
-'
-end
+pyenv_init = <<-EOS
+  export PYENV_ROOT=#{PYENV_ROOT}
+  export PATH="#{pyenv_root}/bin:${PATH}"
+  eval "$(pyenv init --no-rehash -)"
+EOS
 
 execute "install python" do
-  command "source #{PYENV_SCRIPT}; pyenv install 3.5.2"
+  command "#{pyenv_init} pyenv install #{node[:pyenv][:version]}"
+  not_if "#{pyenv_init} pyenv version | grep #{node[:pyenv][:version]}"
 end
 
 execute "set global python 3.5.2" do
-  command "source #{PYENV_SCRIPT}; pyenv global 3.5.2; pyenv rehash"
+  command "#{pyenv_init} pyenv global #{node[:pyenv][:version]}; pyenv rehash"
 end
 
 execute "pip install ansible" do
-  command "source #{PYENV_SCRIPT}; pip install ansible"
+  command "#{pyenv_init} pip install ansible"
 end
