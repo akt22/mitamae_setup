@@ -14,8 +14,3 @@ end
 execute "run setup.sh" do
   command "bash $HOME/dotfiles/setup.sh"
 end
-
-execute "change SHELL" do
-  command "chsh -s /bin/zsh"
-  not_if 'test $SHELL = "/bin/zsh"'
-end
