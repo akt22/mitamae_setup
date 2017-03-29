@@ -22,5 +22,5 @@ execute "set global python 3.5.2" do
 end
 
 execute "pip install ansible" do
-  command "pip install ansible"
+  command "source #{PYENV_SCRIPT}; pip install ansible"
 end
