@@ -1,10 +1,10 @@
-# node[:packages][node[:platform]].each do |p|
-#   package p
-# end
+node[:packages][node[:platform]].each do |p|
+  package p
+end
 
-# node[:packages]["base"].each do |p|
-#   package p
-# end
+node[:packages]["base"].each do |p|
+  package p
+end
 
 git "clone dotfiles" do
   destination File.join(ENV["HOME"], 'dotfiles')

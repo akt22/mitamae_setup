@@ -1,16 +1,20 @@
 ---
 packages:
   base:
-    # - tmux
-    # - zsh
-    # - git
-    # - curl
+    - tmux
+    - zsh
+    - git
+    - curl
     - gawk
   darwin:
-    # - xz
-    # - binutils
+    - xz
+    - binutils
     - coreutils
-    # - findutils
+    - findutils
+  ubuntu:
+    - libbz2-dev
+    - libreadline-dev
+    - libssl-dev
 
 pyenv:
   version: 3.5.2
