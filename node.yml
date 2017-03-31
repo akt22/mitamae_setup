@@ -6,6 +6,7 @@ packages:
     - git
     - curl
     - gawk
+    - gcc
   darwin:
     - xz
     - binutils
