@@ -1,4 +1,3 @@
-# pyenv の設定を.bashrcに書く
 PYENV_ROOT = File.join(ENV["HOME"], '.pyenv')
 git "clone pyenv" do
   destination "#{PYENV_ROOT}"
